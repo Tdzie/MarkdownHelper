@@ -5,11 +5,11 @@
 </head>
 <body>
     <div>
-        <div>
+        <form id="barcodeForm" onsubmit="event.preventDefault(); generateBarcode();">
             <label for="markdownUPC">Markdown UPC:</label>
-            <input type="tel" id="markdownUPC" name="markdownUPC" onkeydown="if (event.keyCode == 13) generateBarcode()">
-            <button onClick="generateBarcode()">Generate Barcode</button>
-        </div>
+            <input type="tel" id="markdownUPC" name="markdownUPC">
+            <button type="submit">Generate Barcode</button>
+        </form>
         <div style="display:inline;">
             <img id="barcodeImage" src="" alt="Barcode will generate here" width="300" />
         </div>
